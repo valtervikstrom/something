@@ -49,7 +49,7 @@
                 {/each}
             </select>
             <input type="submit" value="Registrera">
-            <p>Har du redan ett konto? Testa <a href="/login">logga in.</a></p>
+            <p>Har du redan ett konto? Testa <a href="{base}/login">logga in.</a></p>
         </form>
     </div>
 </main>

@@ -37,7 +37,7 @@
             <label for="password">Lösenord:</label>
             <input type="password" id="password" bind:value={password}>
             <input type="submit" value="Logga in">
-            <p>Har du inget konto? Testa <a href="/register">registrera dig.</a></p>
+            <p>Har du inget konto? Testa <a href="{base}/register">registrera dig.</a></p>
         </form>
 
     </div>
