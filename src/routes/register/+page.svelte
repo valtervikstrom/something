@@ -2,7 +2,8 @@
 <script>    
     import {users_store} from "$lib/user";
     let users = [];
-    
+    import {base} from '$app/paths';
+
     import { onMount } from 'svelte';
     onMount(() => {
         /*Check if has more then 2 characters*/
@@ -11,17 +12,19 @@
         }
     });
 
-	import { preventDefault } from "svelte/legacy";
+    
+
     function handleSubmit() {
-        let current_user = users.find(user => user.name == name)
-        if (current_user.name == name)
-            alert("Användarnamn används redan");
-        else
+
+        let current_user = users.find(user => user.username == name)
+        if (current_user ){
+            alert("Användarnamn används redan");}
+        else{
             alert("Välkommen " + name + " " + email + " " + password + " " + color)
                 
             let new_user = {username: name, password: password, email: email, color: color};
             users = [...users, new_user];
-            $users_store = JSON.stringify(users);
+            $users_store = JSON.stringify(users);}
     }
     let name = ""
     let email = ""

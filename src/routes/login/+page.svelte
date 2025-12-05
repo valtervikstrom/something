@@ -2,6 +2,7 @@
 <script>
     import {users_store} from "$lib/user";
     let users = [];
+	import {base} from '$app/paths';
 
     import { onMount } from 'svelte';
     onMount(() => {
@@ -9,11 +10,19 @@
         if($users_store.length > 2){
             users = JSON.parse($users_store);
         }
+        console.log(users)
     });
 
-	import { preventDefault } from "svelte/legacy";
     function handleSubmit() {
-        if (users.find(user => user.name === name).name == name && users.find(user => user.name === name).email == email && users.find(user => user.name === name).password == password)
+        var keep_looking = true
+        users.forEach(user => {
+            if (keep_looking == true){
+                if (user.username == name && user.email == email && user.password == password)
+                    keep_looking = false
+            }
+        });
+
+        if (keep_looking == false)
             alert("Välkommen, " + name + ", du är nu inloggad")
         else
             alert("Felaktig information eller obefintlig användare. Har du testat Logga In?")
