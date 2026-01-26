@@ -12,6 +12,8 @@
 	<a href="{base}/photoapp">Photo App</a>
 	<a href="{base}/register">Register</a>
 	<a href="{base}/shoppinglist">Shoppinglist</a>
+	<a href="{base}/memory">Memory</a>
+	<a href="{base}/chat">Chat</a>
 </nav>
 
 <svelte:head>
