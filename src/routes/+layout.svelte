@@ -14,6 +14,11 @@
 	<a href="{base}/shoppinglist">Shoppinglist</a>
 	<a href="{base}/memory">Memory</a>
 	<a href="{base}/chat">Chat</a>
+	<a href="{base}/search">Search</a>
+	<a href="{base}/prov">Prov</a>
+	<a href="{base}/badUX">Bad UX</a>
+	<a href="{base}/inputOS">Input OS</a>
+	<a href="{base}/gameExpTest">Shadows Challenge</a>
 </nav>
 
 <svelte:head>
